@@ -6,7 +6,8 @@ let textMonthlyPay = document.getElementById("monthly-payment")
 // function to calculate the total amount per payment
 function calculatePayments(){
     //
-    if(validateForm == true){
+    let validate = validateForm()
+    if(validate == true){
         let modApr = formatApr(aprAmount.value)
         // calculates the interest per year and per month
         let interestperYear = loanAmount.value * modApr
